@@ -67,12 +67,13 @@ function App() {
   ])
 
   const studentList = student.map((studentPropObj, idx) => {
-    return <StudentList studentProp={studentPropObj}/>
+    return <StudentList studentProp={studentPropObj} key={idx}/>
   });
 
   return (
     <>
-      <section>
+      <section class="students">
+        <h1>Students</h1>
         {studentList}
       </section>
     </>
